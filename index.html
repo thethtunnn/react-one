@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- react cdn link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>helloworld</h1>
+    <div id="main"></div>
+    <footer>Footer</footer>
+
+<!-- using bable -->
+    <script type="text/babel">
+        const Main = () => {
+            let name = 'mg mg';
+            let className = "myCar"
+            let num = 38;
+
+           let handler = (e) => {
+                console.log(e)
+            }
+                // class name is not a constant 
+            return <div className={className}>
+                <h1>{name}</h1>
+
+                 <p>{num}</p> {/* num p tag is string */}
+
+                 <button onClick={handler}>click</button>
+
+                </div>
+        }
+
+        let rootContainer = document.getElementById("main")
+
+        let e = React.createElement
+
+        let root = ReactDOM.createRoot(rootContainer);
+
+        root.render(e(Main))
+
+
+    </script>
+</body>
+</html>
