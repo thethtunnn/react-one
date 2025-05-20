@@ -1,0 +1,19 @@
+.navbar{
+    background-color: rgb(96, 153, 218);
+    padding: 10px;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200;
+    margin:auto;
+}
+.navbar .container ul {
+    display: flex;
+}
+
+.navbar .container li {
+    list-style-type:none ;
+    margin: 0 auto;
+}
