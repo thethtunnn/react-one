@@ -1,5 +1,5 @@
 .postList {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,10 +7,10 @@
 }
 
 .postList .single-post {
-    flex: 1;
-    background-color: blue;
+   
+    /* background-color: blue; */
     margin: 20px;
-    width: 500px;
+    flex-basis: 350px;
     height: 300px;
     display: flex;
     justify-content: center;

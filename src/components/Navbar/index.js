@@ -10,7 +10,7 @@ export default function Navbar({SetShowModal}) {
         <ul>
           <li>Home</li>
           <li>Posts</li>
-          <li><butto onClick={()=> SetShowModal(true) }>signIn</butto></li>
+          <li><butto onClick={()=> SetShowModal(true) }>CreatePost</butto></li>
           
         </ul>
       </div>
