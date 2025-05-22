@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import  './index.css';
 import  { useState } from 'react'
 
 
 export default function Index({addPost}) {
-    let [title,setTitle]= useState("")
+    // let [title,setTitle]= useState("")
+    let title = useRef();
 
     let reselForm = ()=> {
-        setTitle('')
+        // setTitle('')
+         title.current.value = ''  //title value is string
+        
         console.log('update now')
     }
     let upload_post = (e) => {
         e.preventDefault();
+       
         let post = {
             id : Math.floor(Math.random()*10000),
-            title : title
+            title : title.current.value
         }
         reselForm()
         addPost(post)
@@ -30,7 +34,7 @@ export default function Index({addPost}) {
         
         <div className='form-control'>
             <label htmlFor=''>Tittle</label>
-            <input type="text" onChange={(e) => setTitle(e.target.value)} value={title}></input>
+            <input type="text" ref={title}></input>
         </div>
         <div className='form-control'>
             <button type='submit'>Post Now</button>
